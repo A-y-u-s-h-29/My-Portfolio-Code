@@ -6,77 +6,108 @@ import { SiRedux, SiJavascript, SiGooglechat } from 'react-icons/si';
 const Projects = () => {
   const projects = [
     {
-      id: 1,
-      title: "AI Chat Bot",
-      description: "Intelligent chatbot powered by Google Gemini API with real-time responses and interactive UI.",
-      technologies: ["React", "Gemini API", "CSS3"],
-      liveLink: "https://ayush-chat-bot.netlify.app/",
-      githubLink: "https://github.com/A-y-u-s-h-29",
-      icon: <SiGooglechat />,
-      gradient: "from-cyan-500 to-blue-600",
-      color: "text-cyan-400",
-      features: ["Real-time AI responses", "Chat history", "Markdown support", "Responsive design"]
-    },
-    {
-      id: 2,
-      title: "Quiz Game",
-      description: "Interactive quiz application with multiple categories, scoring system, and timer functionality.",
-      technologies: ["React", "JavaScript", "Tailwind CSS"],
-      liveLink: "https://ayush-quiz-game.netlify.app/",
-      githubLink: "https://github.com/A-y-u-s-h-29",
-      icon: <FaCode />,
-      gradient: "from-purple-500 to-pink-600",
-      color: "text-purple-400",
-      features: ["Multiple categories", "Score tracking", "Timer", "Progress indicator"]
-    },
-    {
-      id: 3,
-      title: "Currency Converter",
-      description: "Real-time currency conversion tool with up-to-date exchange rates and historical data.",
-      technologies: ["JavaScript", "Exchange API", "Bootstrap"],
-      liveLink: "https://currency-convertor-by-js.netlify.app/",
-      githubLink: "https://github.com/A-y-u-s-h-29",
-      icon: <FaDatabase />,
-      gradient: "from-green-500 to-emerald-600",
-      color: "text-green-400",
-      features: ["Real-time rates", "100+ currencies", "Historical data", "Offline support"]
-    },
-    {
-      id: 4,
-      title: "Todo App (Redux Toolkit)",
-      description: "Feature-rich task management application with state management using Redux Toolkit.",
-      technologies: ["React", "Redux Toolkit", "Local Storage"],
-      liveLink: "https://ayush-todo-by-reduxtoolkit.netlify.app/",
-      githubLink: "https://github.com/A-y-u-s-h-29",
-      icon: <SiRedux />,
-      gradient: "from-orange-500 to-red-600",
-      color: "text-orange-400",
-      features: ["CRUD operations", "Task filtering", "Persistent storage", "Dark mode"]
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      description: "Modern portfolio website showcasing projects with smooth animations and responsive design.",
-      technologies: ["React", "Framer Motion", "Tailwind CSS"],
-      liveLink: "#",
-      githubLink: "#",
-      icon: <FaReact />,
-      gradient: "from-blue-500 to-indigo-600",
-      color: "text-blue-400",
-      features: ["Responsive design", "Smooth animations", "Dark theme", "Performance optimized"]
-    },
-    {
-      id: 6,
-      title: "E-commerce Backend",
-      description: "Robust backend system for e-commerce platform with authentication and payment integration.",
-      technologies: ["Node.js", "Express", "MongoDB"],
-      liveLink: "#",
-      githubLink: "#",
-      icon: <FaNodeJs />,
-      gradient: "from-yellow-500 to-green-600",
-      color: "text-yellow-400",
-      features: ["REST APIs", "JWT auth", "Payment gateway", "Admin panel"]
-    }
+  id: 1,
+  title: "Soorveer Yuva Sangthan – Volunteer Management System",
+  description: "Web application for managing volunteers with secure authentication, database storage, and digital ID card generation.",
+  technologies: ["React", "Node.js", "Express", "MongoDB"],
+  liveLink: "#",
+  githubLink: "https://github.com/A-y-u-s-h-29",
+  icon: <SiGooglechat />,
+  gradient: "from-cyan-500 to-blue-600",
+  color: "text-cyan-400",
+  features: [
+    "Secure login & signup",
+    "Volunteer data stored in database",
+    "Volunteer ID card generation",
+    "Admin management system"
+  ]
+},
+{
+  id: 2,
+  title: "KuntalAgro – E-Commerce Website with Dashboard",
+  description: "Full-stack e-commerce platform with real-time product management, stock tracking, and admin dashboard.",
+  technologies: ["React", "Node.js", "Express", "MongoDB"],
+  liveLink: "#",
+  githubLink: "https://github.com/A-y-u-s-h-29",
+  icon: <FaCode />,
+  gradient: "from-purple-500 to-pink-600",
+  color: "text-purple-400",
+  features: [
+    "Real-time product management",
+    "Stock & inventory tracking",
+    "Admin dashboard",
+    "Responsive UI"
+  ]
+},
+{
+  id: 3,
+  title: "BookingsHSRP – Live QR Code Booking System",
+  description: "QR-based booking system with admin dashboard, Cloudinary image storage, and automated email integration.",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Cloudinary"],
+  liveLink: "#",
+  githubLink: "https://github.com/A-y-u-s-h-29",
+  icon: <FaDatabase />,
+  gradient: "from-green-500 to-emerald-600",
+  color: "text-green-400",
+  features: [
+    "QR code upload & management",
+    "Admin dashboard",
+    "Email form submission",
+    "Dynamic QR linking"
+  ]
+},
+{
+  id: 4,
+  title: "Balloon Decoration Service Website",
+  description: "Service-based website to showcase balloon decoration services using dynamic datasets and optimized image rendering.",
+  technologies: ["React", "JavaScript", "CSS"],
+  liveLink: "#",
+  githubLink: "https://github.com/A-y-u-s-h-29",
+  icon: <SiRedux />,
+  gradient: "from-orange-500 to-red-600",
+  color: "text-orange-400",
+  features: [
+    "Dynamic service listing",
+    "Optimized image handling",
+    "Structured datasets",
+    "Performance optimized UI"
+  ]
+},
+{
+  id: 5,
+  title: "Portfolio Website",
+  description: "Personal portfolio website showcasing projects with clean UI, animations, and responsive layout.",
+  technologies: ["React", "Framer Motion", "Tailwind CSS"],
+  liveLink: "#",
+  githubLink: "#",
+  icon: <FaReact />,
+  gradient: "from-blue-500 to-indigo-600",
+  color: "text-blue-400",
+  features: [
+    "Responsive design",
+    "Smooth animations",
+    "Dark theme",
+    "Modern UI"
+  ]
+},
+{
+  id: 6,
+  title: "E-Commerce Backend System",
+  description: "Backend system supporting authentication, product management, and scalable REST APIs for e-commerce platforms.",
+  technologies: ["Node.js", "Express", "MongoDB"],
+  liveLink: "#",
+  githubLink: "#",
+  icon: <FaNodeJs />,
+  gradient: "from-yellow-500 to-green-600",
+  color: "text-yellow-400",
+  features: [
+    "RESTful APIs",
+    "JWT authentication",
+    "Product & order management",
+    "Admin-ready architecture"
+  ]
+}
+
   ];
 
   const containerVariants = {
