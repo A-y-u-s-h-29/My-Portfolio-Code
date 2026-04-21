@@ -305,31 +305,37 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3 mt-8">
-                  <motion.a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-indigo-500/25 transition-shadow group/btn"
-                  >
-                    <FaExternalLinkAlt className="text-sm" />
-                    Live Demo
-                  </motion.a>
-                  <motion.a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-colors group/btn"
-                  >
-                    <FaGithub />
-                    Code
-                  </motion.a>
-                </div>
+               {/* Action Buttons */}
+<div className="flex gap-3 mt-8">
+  
+  {project.liveLink && project.liveLink !== "#" && (
+    <motion.a
+      href={project.liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-indigo-500/25 transition-shadow group/btn"
+    >
+      <FaExternalLinkAlt className="text-sm" />
+      Live Demo
+    </motion.a>
+  )}
+
+  {/* GitHub button (always visible) */}
+  <motion.a
+    href={project.githubLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-colors group/btn"
+  >
+    <FaGithub />
+    Code
+  </motion.a>
+
+</div>
 
                 {/* Floating Elements */}
                 <motion.div
