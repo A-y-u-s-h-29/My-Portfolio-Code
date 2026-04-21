@@ -329,7 +329,7 @@ const Projects = () => {
     rel="noopener noreferrer"
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-colors group/btn"
+    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border-2 border-white/20 rounded-lg font-semibold hover:bg-white/10 transition-colors group/btn text-white"
   >
     <FaGithub />
     Code
@@ -387,10 +387,10 @@ const Projects = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { label: "Projects Completed", value: "6+" },
+              { label: "Projects Completed", value: "25+" },
               { label: "Technologies Used", value: "12+" },
-              { label: "Live Demos", value: "4" },
-              { label: "GitHub Repos", value: "10+" },
+              { label: "Live Demos", value: "5" },
+              { label: "GitHub Repos", value: "50+" },
             ].map((stat, index) => (
               <motion.div
                 key={index}

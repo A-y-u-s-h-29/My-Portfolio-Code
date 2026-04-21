@@ -294,37 +294,6 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Experience Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-          className="text-center"
-        >
-          <div className="inline-flex items-center gap-8 p-6 rounded-2xl backdrop-blur-sm border border-white/10 bg-gradient-to-br from-gray-900/80 to-gray-800/80">
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                15+
-              </div>
-              <div className="text-gray-400 text-sm">Technologies</div>
-            </div>
-            <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent" />
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                4
-              </div>
-              <div className="text-gray-400 text-sm">Domains</div>
-            </div>
-            <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-500 to-transparent" />
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Full-Stack
-              </div>
-              <div className="text-gray-400 text-sm">Expertise</div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Floating Particles */}
         {[...Array(8)].map((_, i) => (
           <motion.div
