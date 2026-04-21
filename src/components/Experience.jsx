@@ -1,28 +1,36 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { FaCalendarAlt, FaCertificate, FaExternalLinkAlt, FaCode, FaDatabase, FaUsers } from "react-icons/fa";
-import { SiReact, SiNodedotjs, SiExpress, SiMysql } from "react-icons/si";
+import { FaCalendarAlt, FaCertificate, FaExternalLinkAlt, FaCode, FaDatabase, FaUsers, FaCreditCard } from "react-icons/fa";
+import { SiReact, SiNodedotjs, SiExpress, SiMongodb, SiNextdotjs, SiTailwindcss, SiCloudinary } from "react-icons/si";
 
 const Experience = () => {
   const experience = {
-    role: "Full Stack Intern",
-    company: "CareerNest Technology",
-    period: "July – August 2025",
-    duration: "2 Months",
-    description: "Worked on real-world projects involving React.js, Node.js, Express.js, and MySQL. Gained hands-on experience in full-stack development, API integration, and database management while enhancing teamwork and problem-solving skills. Collaborated with senior developers to deliver optimized, scalable, and user-friendly web solutions.",
-    certificateUrl: "https://drive.google.com/file/d/154NOwmdSa4bI-cRzu44hjaNgY3FehgHP/view?usp=sharing",
+    role: "React.js Developer",
+    company: "Digital Express India",
+    period: "2025",
+    duration: "Ongoing",
+    description: "Worked on real-world production-level applications as a React.js Developer, building secure authentication-based systems, integrating Razorpay for payments, and developing admin dashboards. Gained hands-on experience in full-stack development using modern technologies while focusing on performance, scalability, and user experience.",
+    certificateUrl: "",
     responsibilities: [
-      "Developed responsive front-end interfaces using React.js",
-      "Built RESTful APIs with Node.js and Express.js",
-      "Managed database operations with MySQL",
-      "Collaborated with senior developers on real projects",
-      "Implemented scalable web solutions"
+      "Developed authentication-based applications with secure login & signup",
+      "Integrated Razorpay for secure online payment processing",
+      "Built admin dashboards for managing users, products, and data",
+      "Designed responsive UI using Tailwind CSS",
+      "Developed RESTful APIs using Node.js and Express.js",
+      "Managed database operations using MongoDB",
+      "Integrated Cloudinary for media storage",
+      "Worked on deployment and hosting of applications",
+      "Collaborated on scalable and production-ready solutions"
     ],
     technologies: [
       { name: "React.js", icon: <SiReact />, color: "text-cyan-400" },
+      { name: "Next.js", icon: <SiNextdotjs />, color: "text-white" },
       { name: "Node.js", icon: <SiNodedotjs />, color: "text-green-500" },
       { name: "Express.js", icon: <SiExpress />, color: "text-gray-300" },
-      { name: "MySQL", icon: <SiMysql />, color: "text-blue-400" },
+      { name: "MongoDB", icon: <SiMongodb />, color: "text-green-400" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-cyan-400" },
+      { name: "Cloudinary", icon: <SiCloudinary />, color: "text-blue-400" },
+      { name: "Razorpay", icon: <FaCreditCard />, color: "text-indigo-500" }
     ]
   };
 
@@ -153,12 +161,11 @@ const Experience = () => {
             whileHover="hover"
             className="relative group"
           >
-            {/* Glow Effect */}
             <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
             
-            {/* Experience Card */}
             <div className="relative p-8 md:p-12 rounded-2xl backdrop-blur-sm border border-white/10 bg-gradient-to-br from-gray-900/80 to-gray-800/80 shadow-2xl">
-              {/* Header Section */}
+              
+              {/* Header */}
               <motion.div variants={itemVariants} className="flex flex-col md:flex-row md:items-center justify-between mb-8">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -177,21 +184,6 @@ const Experience = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Certificate Button */}
-                <motion.a
-                  href={experience.certificateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="mt-4 md:mt-0 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-shadow group/btn"
-                >
-                  <FaCertificate className="text-lg" />
-                  View Certificate
-                  <FaExternalLinkAlt className="text-sm group-hover/btn:translate-x-1 transition-transform" />
-                </motion.a>
               </motion.div>
 
               {/* Description */}
@@ -215,12 +207,11 @@ const Experience = () => {
                   {experience.responsibilities.map((responsibility, index) => (
                     <motion.div
                       key={index}
-                      custom={index}
                       variants={itemVariants}
-                      className="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors group/item"
+                      className="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
                     >
                       <div className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" />
-                      <span className="text-gray-300 group-hover/item:text-white transition-colors">
+                      <span className="text-gray-300">
                         {responsibility}
                       </span>
                     </motion.div>
@@ -240,9 +231,9 @@ const Experience = () => {
                       initial="hidden"
                       animate="visible"
                       whileHover="hover"
-                      className="flex flex-col items-center gap-2 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group/tech"
+                      className="flex flex-col items-center gap-2 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors"
                     >
-                      <div className={`text-3xl ${tech.color} group-hover/tech:scale-110 transition-transform`}>
+                      <div className={`text-3xl ${tech.color}`}>
                         {tech.icon}
                       </div>
                       <span className="text-gray-300 text-sm">{tech.name}</span>
@@ -251,77 +242,8 @@ const Experience = () => {
                 </div>
               </motion.div>
 
-              {/* Decorative Elements */}
-              <motion.div 
-                className="absolute -top-4 -left-4 w-8 h-8 border-t-2 border-l-2 border-cyan-400/50 rounded-tl-xl"
-                animate={{
-                  rotate: [0, 90, 180, 270, 360]
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-              <motion.div 
-                className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-blue-400/50 rounded-br-xl"
-                animate={{
-                  rotate: [360, 270, 180, 90, 0]
-                }}
-                transition={{
-                  duration: 10,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-
-              {/* Floating Badge */}
-              <motion.div 
-                className="absolute -top-6 -right-6"
-                animate={{
-                  y: [0, -10, 0]
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <div className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-sm font-bold">
-                  Internship
-                </div>
-              </motion.div>
             </div>
           </motion.div>
-
-          {/* Timeline Indicator */}
-          <motion.div 
-            initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 1.5, delay: 0.5 }}
-            className="mt-8 mx-auto w-48 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent rounded-full"
-          />
-        </motion.div>
-
-        {/* Upcoming Experience CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-gray-400 mb-6">Looking for new opportunities</p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-cyan-500/30 rounded-xl font-semibold hover:bg-cyan-500/10 transition-colors group/cta"
-          >
-            <span>Open to New Opportunities</span>
-            <svg className="w-5 h-5 group-hover/cta:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </motion.a>
         </motion.div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar"
 import Project from "./components/Project"
 import Skills from "./components/Skills"
 import Certificates from "./components/certificates"
-
+import Footer from "./components/Footer"
 const App = () => {
   return (
     <>
@@ -18,6 +18,7 @@ const App = () => {
     <Experience />
     <Project />
     <Certificates />
+    <Footer />
     </>
   )
 }

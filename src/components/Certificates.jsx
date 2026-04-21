@@ -55,18 +55,6 @@ const Certificates = () => {
     },
     {
       id: 5,
-      title: "MySQL Database Certification",
-      issuer: "Coursera",
-      date: "2023",
-      description: "Database design, SQL queries, normalization, and database management concepts.",
-      link: "https://drive.google.com/file/d/1Of3HLIflaV8rX_6ID43B0mN_TC2eW5Ci/view?usp=sharing",
-      icon: <SiMysql />,
-      gradient: "from-blue-600 to-blue-400",
-      color: "text-blue-500",
-      technologies: ["MySQL", "Database Design", "SQL", "Normalization"]
-    },
-    {
-      id: 6,
       title: "Node.js Backend Development",
       issuer: "LinkedIn Learning",
       date: "2023",
@@ -307,58 +295,8 @@ const Certificates = () => {
           ))}
         </motion.div>
 
-        {/* Certificate Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="mt-16"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {[
-              { label: "Total Certifications", value: "6", icon: <FaCertificate /> },
-              { label: "Platforms", value: "5+", icon: <FaGraduationCap /> },
-              { label: "Skill Areas", value: "8+", icon: <FaCode /> },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="text-center p-6 rounded-2xl backdrop-blur-sm border border-white/10 bg-gradient-to-br from-gray-900/50 to-gray-800/50"
-              >
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm">{stat.label}</div>
-                <div className="mt-3 text-blue-400">
-                  {stat.icon}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Additional Certification CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5 }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-400 mb-6">Continuously learning and adding new certifications</p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500/30 rounded-xl font-semibold hover:bg-blue-500/10 transition-colors group/cta"
-          >
-            <span>Request More Details</span>
-            <svg className="w-5 h-5 group-hover/cta:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </motion.a>
-        </motion.div>
+        
+        
       </div>
     </section>
   );

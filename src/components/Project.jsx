@@ -9,9 +9,9 @@ const Projects = () => {
   id: 1,
   title: "Soorveer Yuva Sangthan – Volunteer Management System",
   description: "Web application for managing volunteers with secure authentication, database storage, and digital ID card generation.",
-  technologies: ["React", "Node.js", "Express", "MongoDB"],
-  liveLink: "#",
-  githubLink: "https://github.com/A-y-u-s-h-29",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+  liveLink: "https://www.soorveeryuvasangthan.com/",
+  githubLink: "https://github.com/A-y-u-s-h-29/Soorveeryuvasangathan",
   icon: <SiGooglechat />,
   gradient: "from-cyan-500 to-blue-600",
   color: "text-cyan-400",
@@ -26,9 +26,9 @@ const Projects = () => {
   id: 2,
   title: "KuntalAgro – E-Commerce Website with Dashboard",
   description: "Full-stack e-commerce platform with real-time product management, stock tracking, and admin dashboard.",
-  technologies: ["React", "Node.js", "Express", "MongoDB"],
-  liveLink: "#",
-  githubLink: "https://github.com/A-y-u-s-h-29",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+  liveLink: "https://www.kuntalagro.com/",
+  githubLink: "https://github.com/A-y-u-s-h-29/Kuntal-Final-Repo",
   icon: <FaCode />,
   gradient: "from-purple-500 to-pink-600",
   color: "text-purple-400",
@@ -41,11 +41,11 @@ const Projects = () => {
 },
 {
   id: 3,
-  title: "BookingsHSRP – Live QR Code Booking System",
-  description: "QR-based booking system with admin dashboard, Cloudinary image storage, and automated email integration.",
-  technologies: ["React", "Node.js", "Express", "MongoDB", "Cloudinary"],
-  liveLink: "#",
-  githubLink: "https://github.com/A-y-u-s-h-29",
+  title: "Apple Disease Detection Model",
+  description: "Developed an image-based classification model using YOLOv8 to identify diseases in single or multiple apples, providing accurate predictions along with confidence levels.",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "Tailwind CSS"],
+  liveLink: "https://merry-choux-f08463.netlify.app",
+  githubLink: "https://github.com/A-y-u-s-h-29/Final-Year-Project-Apple-Disease-Detection-System-",
   icon: <FaDatabase />,
   gradient: "from-green-500 to-emerald-600",
   color: "text-green-400",
@@ -60,9 +60,9 @@ const Projects = () => {
   id: 4,
   title: "Balloon Decoration Service Website",
   description: "Service-based website to showcase balloon decoration services using dynamic datasets and optimized image rendering.",
-  technologies: ["React", "JavaScript", "CSS"],
+  technologies: ["React", "JavaScript", "Tailwind CSS"],
   liveLink: "#",
-  githubLink: "https://github.com/A-y-u-s-h-29",
+  githubLink: "https://github.com/A-y-u-s-h-29/Balloon",
   icon: <SiRedux />,
   gradient: "from-orange-500 to-red-600",
   color: "text-orange-400",
@@ -75,11 +75,11 @@ const Projects = () => {
 },
 {
   id: 5,
-  title: "Portfolio Website",
-  description: "Personal portfolio website showcasing projects with clean UI, animations, and responsive layout.",
-  technologies: ["React", "Framer Motion", "Tailwind CSS"],
-  liveLink: "#",
-  githubLink: "#",
+  title: "Creation Empire",
+  description: "Professional clothing store with admin panel to add new products and edit them along with auth system.",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "Tailwind CSS"],
+  liveLink: "https://www.creationempire.in",
+  githubLink: "https://github.com/A-y-u-s-h-29",
   icon: <FaReact />,
   gradient: "from-blue-500 to-indigo-600",
   color: "text-blue-400",
@@ -92,11 +92,11 @@ const Projects = () => {
 },
 {
   id: 6,
-  title: "E-Commerce Backend System",
-  description: "Backend system supporting authentication, product management, and scalable REST APIs for e-commerce platforms.",
-  technologies: ["Node.js", "Express", "MongoDB"],
-  liveLink: "#",
-  githubLink: "#",
+  title: "Digital Express India ",
+  description: "Designed and developed a modern, stylish website with seamless Razorpay integration for secure and efficient payment processing.",
+  technologies: ["React","Node.js", "Express", "MongoDB" , "RazorPay", "Tailwind CSS"],
+  liveLink: "https://digitalexpressindia.com/",
+  githubLink: "https://github.com/A-y-u-s-h-29/Digital-Express-India-With-Carrer-Page-And-RazorPay",
   icon: <FaNodeJs />,
   gradient: "from-yellow-500 to-green-600",
   color: "text-yellow-400",
@@ -183,7 +183,7 @@ const Projects = () => {
   });
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-12 relative overflow-hidden">
+    <section className="py-20 px-4 md:px-8 lg:px-12 relative" id="projects" >
       {/* Background Elements */}
       <motion.div 
         className="absolute top-20 left-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
@@ -210,7 +210,7 @@ const Projects = () => {
         }}
       />
 
-      <div className="container mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -364,8 +364,8 @@ const Projects = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white/20 rounded-xl font-semibold hover:bg-white/10 transition-colors group/cta"
           >
-            <FaGithub className="text-2xl" />
-            <span>View All Projects on GitHub</span>
+            <FaGithub className="text-2xl bg-white rounded-full" />
+            <span className='text-white'>View All Projects on GitHub</span>
             <svg className="w-5 h-5 group-hover/cta:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

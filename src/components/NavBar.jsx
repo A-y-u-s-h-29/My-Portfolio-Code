@@ -18,11 +18,11 @@ const NavBar = () => {
       icon: <FaGithub />,
       label: "GitHub"
     },
-    {
-      href: "mailto:ayushsharma00123456@gmail.com",
-      icon: <FaEnvelope />,
-      label: "Email"
-    }
+   {
+  href: "https://mail.google.com/mail/?view=cm&fs=1&to=ayushsharma00123456@gmail.com",
+  icon: <FaEnvelope />,
+  label: "Email"
+}
   ];
 
   const logoVariants = {
@@ -178,20 +178,27 @@ const NavBar = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8 }}
             >
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="hidden lg:inline-block px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-pink-500/25 transition-shadow relative overflow-hidden group"
-              >
-                <span className="relative z-10">Let's Connect</span>
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.a>
+             <motion.a
+  onClick={(e) => {
+    e.preventDefault();
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="hidden lg:inline-block px-6 py-2 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-pink-500/25 transition-shadow relative overflow-hidden group cursor-pointer"
+>
+  <span className="relative z-10">Let's Connect</span>
+
+  <motion.div 
+    className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500"
+    initial={{ x: "-100%" }}
+    whileHover={{ x: 0 }}
+    transition={{ duration: 0.3 }}
+  />
+</motion.a>
             </motion.div>
           </div>
 

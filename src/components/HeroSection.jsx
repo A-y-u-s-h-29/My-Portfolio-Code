@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { HashLink } from 'react-router-hash-link';
 import linkedinPhoto from "../assets/linkedin_photo.png";
 
 const HeroSection = () => {
@@ -143,7 +144,7 @@ const HeroSection = () => {
                 animate="visible"
                 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-[length:200%_auto] bg-clip-text text-transparent"
               >
-                Full Stack Developer
+                ReactJS Developer
               </motion.span>
             </motion.div>
 
@@ -151,7 +152,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl"
             >
-              Skilled Full-Stack Developer with expertise in React, Node.js, Java, and MySQL, 
+              Skilled Reactjs Developer with expertise in React, Node.js, Express.js , Java, and MySQL, 
               capable of building responsive front-end interfaces and robust back-end systems. 
               Focused on writing clean code and delivering scalable, user-friendly web applications.
             </motion.p>
@@ -160,14 +161,24 @@ const HeroSection = () => {
               variants={itemVariants}
               className="flex gap-4"
             >
+             <motion.button
+  onClick={() => {
+    document.getElementById("projects")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  }}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-pink-500/25 transition-shadow"
+>
+  View Projects
+</motion.button>
               <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg font-semibold hover:shadow-lg hover:shadow-pink-500/25 transition-shadow"
-              >
-                View Projects
-              </motion.button>
-              <motion.button 
+               onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth"
+    });
+  }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border-2 border-purple-500 rounded-lg font-semibold hover:bg-purple-500/10 transition-colors"
